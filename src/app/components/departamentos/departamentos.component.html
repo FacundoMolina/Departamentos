@@ -1,0 +1,23 @@
+<h1>Departamentos<small> Zona céntrica</small></h1>
+<hr>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <!---->
+    <div class="col animated fadeIn fast" *ngFor="let departamento of departamentos; let i=index ">
+        <div class="card h-100">
+          <img [src]="departamento.img" class="card-img-top" [alt]="departamento.nombre">
+          <div class="card-body">
+            <h5 class="card-title">{{departamento.nombre}}</h5> 
+            <p class="card-text">{{departamento.bio}}</p>
+          </div>
+          <button (click)="verDepartamento(i)" type="button" class="btn btn-outline-primary btn-block">
+            Ver mas..
+          </button>
+          <!--<a [routerLink]="['/departamento',i]" class="btn btn-outline-primary">Ver mas link...</a>--> <!--Busco los departamentos por ruta-->
+          <div class="card-footer">
+            <!--<small class="text-muted">{{departamento.aparicion}}</small>-->
+          </div>
+        </div>
+    </div>
+
+</div>

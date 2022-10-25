@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!--Cambio el color-->
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav class="navbar bg-dark"> <!--Cambio la imagen de navbar-->
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/departamento_logo6.png" alt="Bootstrap" width="30" height="24">
+        </a>
+      </div>
+    </nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!--Active-->
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['Inicio']">Inicio</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['departamentos']">Departamentos</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['ubicaciones']">Ubicaciones</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['contactanos']">Contactanos</a>
+        </li>
+      </ul>
+      <div class="d-flex" role="search">
+      <!--<form class="form-inline my-2 my-lg-0">-->
+        <!--<input class="form-control me-2" type="search" placeholder="Buscar departamento" (keyup.enter)="buscarDepartamento(buscarTexto.value)" #buscarTexto>-->
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar departamento" aria-label="Search" (keyup.enter)="buscarDepartamento(buscarTexto.value)" #buscarTexto>
+        <button (click)="buscarDepartamento(buscarTexto.value)"
+          class="btn btn-outline-primary my-2 my-sm-0" type="button">Buscar
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
