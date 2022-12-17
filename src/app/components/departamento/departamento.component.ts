@@ -12,7 +12,7 @@ export class DepartamentoComponent{
               private _departamentosService : DepartamentosService) {
     this.activatedRoute.params.subscribe(params=>{
       this.departamento = this._departamentosService.getDepartamento(params['id']);
-      console.log(this.departamento);
+      //console.log(this.departamento);
     })
    }
 

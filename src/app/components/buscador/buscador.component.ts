@@ -16,7 +16,7 @@ export class BuscadorComponent implements OnInit {
               private router:Router) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => {
+      this.activatedRoute.params.subscribe(params => {
       this.termino = params['termino'];
       this.departamentos=this._departamentosService.buscarDepartamentos(params['termino']);
       console.log(this.departamentos);
@@ -24,8 +24,7 @@ export class BuscadorComponent implements OnInit {
   }
   
   verDepartamento(idx:number){
-    console.log("Hola");
-     this.router.navigate(['/departamento',idx]);
+    this.router.navigate(['/departamento',idx]);
   }
 
 }

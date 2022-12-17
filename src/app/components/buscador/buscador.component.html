@@ -12,18 +12,19 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col animated fadeIn fast" *ngFor="let departamento of departamentos; let i=index ">
         <div class="card h-100">
-          <img [src]="departamento.img" class="card-img-top" [alt]="departamento.nombre">
+          <p-carousel [value]="departamento.img" [numScroll]="1" [circular]="true" [autoplayInterval]="1000">
+            <ng-template let-img pTemplate="item">
+              <img [src]="img" class="card-img-top"> 
+            </ng-template>
+          </p-carousel>
           <div class="card-body">
             <h5 class="card-title">{{departamento.nombre}}</h5>
-            <p class="card-text">{{departamento.bio}}</p>
+            <p class="card-text">{{departamento.descripcion}}</p>
           </div>
-          <button (click)="verDepartamento(i)" type="button" class="btn btn-outline-primary btn-block">
+          <button (click)="verDepartamento(departamento.id)" type="button" class="btn btn-outline-primary btn-block">
             Ver mas..
           </button>
           <!--<a [routerLink]="['/departamento',i]" class="btn btn-outline-primary">Ver mas link...</a>--> <!--Busco los departamento por ruta-->
-          <div class="card-footer">
-            <small class="text-muted">{{departamento.aparicion}}</small>
-          </div>
         </div>
     </div>
 

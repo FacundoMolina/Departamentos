@@ -1,22 +1,21 @@
-<h1 class="animated fadeIn">{{departamento.nombre | uppercase}} <small>{{departamento.aparicion}} </small></h1>
+<!--Aqui entramos cuando ponemos Ver mas-->
+<h1 class="animated fadeIn">{{departamento.nombre | uppercase}}</h1>
 <hr>
 <div class="row animated fadeIn fast">
     <div class="col-md-4">
-        <img [src]="departamento.img" class="img-fluid" [alt]="departamento.nombre">
+        <p-carousel [value]="departamento.img" [autoplayInterval]="3000" [circular]="true">
+            <ng-template let-img pTemplate="item">
+              <img [src]="img" class="card-img-top" width="100" height="150"> 
+            </ng-template>
+          </p-carousel>
         <br><br>
-        <!--<a href="departamentos" class="btn btn-outlline-danger btn-block">Regresar</a>-->
         <a [routerLink]="['/departamentos']" class="btn btn-outline-danger btn-block">Regresar</a>
     </div>
     <div class="col-md-8">
         <h3>{{departamento.nombre}}</h3>
         <hr>
         <p>
-            {{departamento.bio}}
+            {{departamento.descripcion}}
         </p>
-        <!--
-        <div>
-            <img *ngIf="departamento.casa=='Marvel'" class="img-logo" src="assets/img/Marvel_logo.png" alt="">
-            <img *ngIf="departamento.casa=='DC'" class="img-logo" src="assets/img/DC_logo.png" alt="">
-        </div>-->
     </div>
 </div>

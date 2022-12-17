@@ -3,7 +3,7 @@ import * as L from 'leaflet';
 import 'leaflet-routing-machine';
 import { icon, Marker } from 'leaflet';
 import { Inject, Input, OnInit } from '@angular/core';
- 
+
 //9 de julio -24.788970020163735, -65.41025653559548
 //Belgrano -24.787704955859404, -65.40737449076312
 export const DEFAULT_LAT = -24.788970020163735;

@@ -2,12 +2,14 @@
   <div class="container-fluid">
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+       <span class="navbar-toggler-icon"></span> 
+       <i class="bi bi-building"></i>
     </button>
+    
     <nav class="navbar bg-dark"> <!--Cambio la imagen de navbar-->
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="assets/img/departamento_logo6.png" alt="Bootstrap" width="30" height="24">
+          <i class="bi bi-building"></i>
         </a>
       </div>
     </nav>
@@ -22,6 +24,9 @@
         </li>
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['ubicaciones']">Ubicaciones</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['favoritos']">Favoritos</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['contactanos']">Contactanos</a>

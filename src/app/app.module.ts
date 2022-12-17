@@ -7,9 +7,6 @@ import { APP_ROUTING } from './app.routes';
 //Servicios
 import {DepartamentosService} from './servicios/departamentos.service';
 
-//bootstrap
-//import { NgModule } from '@ng-bootstrap/ng-bootstrap'; //En el video lo tiene pero a mi me tira error
-
 //Componentes
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +19,8 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
 import { DepartamentoTarjetaComponent } from './components/departamento-tarjeta/departamento-tarjeta.component';
 import { UbicacionesComponent } from './components/ubicaciones/ubicaciones.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CarouselComponent } from './components/carousel/carousel.component';
+import { PrimeComponentsModule } from './prime-components.module';
+import { FavoritosComponent } from './components/favoritos/favoritos.component';
 
 @NgModule({
   declarations: [
@@ -35,14 +33,14 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     BuscadorComponent,
     DepartamentoTarjetaComponent,
     UbicacionesComponent,
-    CarouselComponent
+    FavoritosComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     APP_ROUTING,
-    BrowserAnimationsModule,
-    //NgModule //En el video lo tiene, no me tira error, igual lo saque
+    PrimeComponentsModule
   ],
   providers: [
     DepartamentosService

@@ -1,0 +1,19 @@
+<h1>Departamentos elegidos como favoritos</h1>
+<hr>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col animated fadeIn fast" *ngFor="let departamento of favoritos; let i=index ">
+        <div class="card h-100">
+          <p-carousel [value]="departamento.img" [numScroll]="1" [circular]="true" [autoplayInterval]="3000">
+            <ng-template let-img pTemplate="item">
+              <img [src]="img" class="card-img-top" width="100" height="150"> 
+            </ng-template>
+          </p-carousel>
+
+          <div class="card-body">
+            <h5 class="card-title">{{departamento.nombre}}</h5> 
+            <p class="card-text">{{departamento.descripcion}}</p>
+          </div>
+        </div>
+    </div>
+
+</div>
